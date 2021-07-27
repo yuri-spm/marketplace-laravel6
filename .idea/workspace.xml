@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fa0326c1-20f4-4461-be32-d4d017ac09e0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1627388076324</updated>
       <workItem from="1627388084975" duration="8153000" />
-      <workItem from="1627412263603" duration="1522000" />
+      <workItem from="1627412263603" duration="3252000" />
     </task>
     <servers />
   </component>
