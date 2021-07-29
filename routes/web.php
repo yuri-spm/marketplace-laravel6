@@ -45,12 +45,12 @@ Route::get('/model', function(){
 
 
 // Mass Update
-
-    $user = \App\User::find(81);
-    $user->update([
-        'name' => 'Atualizando com Mass Update'
-    ]); // true ou false caso vc sobrescreva o valor
-    dd($user);
+//
+//    $user = \App\User::find(81);
+//    $user->update([
+//        'name' => 'Atualizando com Mass Update'
+//    ]); // true ou false caso vc sobrescreva o valor
+//    dd($user);
 
 
     return \App\User::all();;
