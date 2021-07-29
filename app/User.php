@@ -37,4 +37,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
 //        'name' =>'boolean' - converte os valores para o valor definido
     ];
+
+    // 1 para 1 -> 1 user  pertence a  1 loja
+    public function store()
+    {
+        return $this->hasOne(Store::class);
+    }
+
+
+
 }
