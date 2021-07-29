@@ -26,9 +26,18 @@ Route::get('/model', function(){
     // $user->email = 'email@teste.com';
     // $user->password = bcrypt('12345678');
     $user->save();
-    
+    http://127.0.0.1:8000/model
 
-    return \App\User::all();
 
-    // return $products;
+    //\App\User::all(); - retorna todos usuarios
+    //\App\User::find(4) - retorna um usuario com id
+    // \App\User::where('name', 'Dr. Melvina Mraz')->get();  - retorna as informações do name pesquisado
+    //\App\User::where('name', 'Dr. Melvina Mraz')->first(); - retorna o primeiro resultado com o name
+    //\App\User::paginate(10); - paginar dados com laravel
+
+
+
+    return \App\User::all();;
+
+
 });
