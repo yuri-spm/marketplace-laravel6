@@ -11,4 +11,10 @@ class Store extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    // 1 para N -> 1 loja  para N produtos
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }
