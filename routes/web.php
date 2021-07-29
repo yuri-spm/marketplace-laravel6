@@ -35,6 +35,22 @@ Route::get('/model', function(){
     //\App\User::where('name', 'Dr. Melvina Mraz')->first(); - retorna o primeiro resultado com o name
     //\App\User::paginate(10); - paginar dados com laravel
 
+//   Mass Assignment - atribuição em massa
+//    $user = \App\User::create([
+//        'name' => 'Nanderson Castro',
+//        'email' => 'email100@email.com',
+//        'password' => bcrypt(87654321)
+//    ]);
+//    dd($user);
+
+
+// Mass Update
+
+    $user = \App\User::find(81);
+    $user->update([
+        'name' => 'Atualizando com Mass Update'
+    ]); // true ou false caso vc sobrescreva o valor
+    dd($user);
 
 
     return \App\User::all();;
