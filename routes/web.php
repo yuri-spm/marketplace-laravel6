@@ -130,3 +130,4 @@ $product = \App\Product::find(41);
 return $product->categories;
 });
 
+Route::get('/admin/stores', 'Admin\\StoreController@index');

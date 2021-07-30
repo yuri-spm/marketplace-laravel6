@@ -7,5 +7,10 @@ use Illuminate\Http\Request;
 
 class StoreController extends Controller
 {
-    //git a
+    public function index()
+    {
+        $stores = \App\Store::all();
+
+        return  $stores;
+    }
 }
