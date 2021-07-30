@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa0326c1-20f4-4461-be32-d4d017ac09e0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/stores/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/StoreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/StoreController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -120,7 +121,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1vtj2gb6M2izBATToGK1PPST9oh" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -159,7 +162,7 @@
       <workItem from="1627572503184" duration="5066000" />
       <workItem from="1627584524091" duration="1111000" />
       <workItem from="1627585691727" duration="6165000" />
-      <workItem from="1627643904456" duration="8208000" />
+      <workItem from="1627643904456" duration="8862000" />
     </task>
     <servers />
   </component>
