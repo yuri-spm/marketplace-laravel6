@@ -71,5 +71,58 @@ Route::get('/model', function(){
 //    $categoria = \App\Category::find(1);
 //    $categoria->products;
 
+
+// Criar uma loja para um usuário
+
+//$user = \App\User::find(10);
+//$store = $user->store()->create([
+//    'name' => 'Loja Teste',
+//    'description' => 'Loja Teste de produtos de informática',
+//    'phone' => 'XX -XXXXXX-XXXX',
+//    'mobile_phone' => 'XX -XXXXXX-XXXX',
+//    'slug' => 'Loja-teste'
+//]);
+//dd($store);
+
+
+// Criar um produto para uma loja
+
+//$store = \App\Store::find(41);
+//$product = $store->products()->create([
+//    'name' => 'Notebook Dell',
+//    'description' => 'Core I5 10GB',
+//    'body' => 'Qualquer coisa',
+//    'price' => 2999.90,
+//    'slug' => 'notebook-ell'
+//]);
+//
+//
+//dd($product);
+
+
+// Criar uma categoria
+
+// \App\Category::create([
+//    'name' => 'Games',
+//    'description' => null,
+//    'slug' => 'games'
+//]);
+//
+//    \App\Category::create([
+//        'name' => 'Notebooks',
+//        'description' => null,
+//        'slug' => 'notebooks'
+//    ]);
+//
+//    return \App\Category::all();
+
+// Adc um produto para uma categoria ou  vice-versa
+    //attach() -> adc os id's
+    //detach() -> remove o id's
+    //sync() -> controla o fluxo de ligações
+
+//    $product = \App\Product::find(41);
+//    dd($product->categories()->sync([1]));
+
 });
 
