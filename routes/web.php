@@ -124,5 +124,9 @@ Route::get('/model', function(){
 //    $product = \App\Product::find(41);
 //    dd($product->categories()->sync([1]));
 
+
+
+$product = \App\Product::find(41);
+return $product->categories;
 });
 

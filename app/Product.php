@@ -8,8 +8,8 @@ class Product extends Model
 {
 
     protected  $fillable = ['name', 'description', 'body', 'price', 'slug'];
-   
-    // 1 para N -> 1 loja para 1 produtos
+
+    // 1 para 1 -> 1 loja para 1 produtos
     public function store()
     {
         return $this->belongsTo(Store::class);
