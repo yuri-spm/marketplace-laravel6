@@ -1,23 +1,27 @@
+@extends('layouts.app')
 
+@section('content')
 
-<table>
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Loja</th>
-            <th>Ações</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($stores as $store)
+    <table class="table table-str">
+        <thead>
             <tr>
-                <td>{{$store->id}}</td>
-                <td>{{$store->name}}</td>
-                <td></td>
-
+                <th>#</th>
+                <th>Loja</th>
+                <th>Ações</th>
             </tr>
-        @endforeach
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach($stores as $store)
+                <tr>
+                    <td>{{$store->id}}</td>
+                    <td>{{$store->name}}</td>
+                    <td></td>
 
-{{$stores->links()}} {{-- Paginação usar link --}}
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+
+    {{$stores->links()}} {{-- Paginação usar link --}}
+
+@endsection
