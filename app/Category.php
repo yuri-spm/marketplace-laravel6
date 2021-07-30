@@ -8,6 +8,8 @@ class Category extends Model
 {
 
     protected  $fillable = ['name', 'description', 'slug'];
+ 
+ 
     // N para N -> N produtos para N categorias
     public function products()
     {

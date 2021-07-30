@@ -21,12 +21,12 @@ Route::get('/model', function(){
 
     // $user = new \App\User();
 
-    $user = \App\User::find(41);
+    $user = \App\User::find(1);
     $user->name = 'Usuario Test Editado';
     // $user->email = 'email@teste.com';
     // $user->password = bcrypt('12345678');
     $user->save();
-    http://127.0.0.1:8000/model
+ 
 
 
     //\App\User::all(); - retorna todos usuarios
