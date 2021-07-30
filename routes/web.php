@@ -26,7 +26,7 @@ Route::get('/model', function(){
     // $user->email = 'email@teste.com';
     // $user->password = bcrypt('12345678');
     $user->save();
- 
+
 
 
     //\App\User::all(); - retorna todos usuarios
@@ -52,8 +52,24 @@ Route::get('/model', function(){
 //    ]); // true ou false caso vc sobrescreva o valor
 //    dd($user);
 
+//     $user = \App\User::find(4); -> Como eu faria para pegar a loja de um usuario
 
-    return \App\User::all();;
+//    dd($user->store()->count()); -> contar usuario
 
+
+//    return $user->store;
+//    return \App\User::all();;
+
+//    $loja = \App\Store::find(1); - buscando loja
+//    return $loja->products;
+
+//    $loja = \App\Store::find(1); -> buscar produto de id 1
+//    return $loja->products()->where('id', 1)->get();
+
+// categoria de uma loja como pegar?
+
+//    $categoria = \App\Category::find(1);
+//    $categoria->products;
 
 });
+

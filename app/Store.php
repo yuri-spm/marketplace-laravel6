@@ -15,7 +15,7 @@ class Store extends Model
     }
 
     // 1 para N -> 1 loja  para N produtos
-    public function prodcuts()
+    public function products()
     {
         return $this->hasMany(Product::class);
     }
