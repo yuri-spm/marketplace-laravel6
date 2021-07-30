@@ -1,7 +1,7 @@
 <h1>Criar Loja</h1>
 
 <form action="/admin/stores/store" method="post">
-
+    @csrf
     <div>
         <label>Nome Loja</label>
         <input type="text" name="name">
