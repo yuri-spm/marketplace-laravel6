@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-https://drive.google.com/drive/folders/1mqFi-x8QP1kxdoyXbeUGW0V2yX1IgbPf
+
 Route::prefix('admin')->name('admin.')->namespace('Admin')->group(function (){
     Route::prefix('stores')->name('stores.')->group(function (){
         Route::get('/', 'StoreController@index')->name('index');
