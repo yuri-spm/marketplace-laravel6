@@ -39,10 +39,19 @@ class StoreController extends Controller
     public function update(Request $request, $store)
     {
         $data = $request->all();
-// dd($data);
+
         $store = \App\Store::find($store);
         $store->update($data);
 
         return $store;
+    }
+
+    public function destroy($store)
+    {
+        $store = \App\Store::find($store);
+        $store->delete();
+
+        return redirect('/admin/stores');
+
     }
 }
