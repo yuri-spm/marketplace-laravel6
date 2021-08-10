@@ -16,7 +16,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-           @auth
+          
+            @auth
        
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item @if(request()->is('admin/stores')) active @endif">
@@ -35,11 +36,14 @@
                                 @csrf
                             </form>
                         </li>
-
+                        <li class="nav-item">
+                            <span class="nav-link">{{ auth()->user()->name }}</span>
+                        </li>
                     </ul>
                 </div>
                 
             @endauth 
+            
         </div>
     </div>
 </nav>
