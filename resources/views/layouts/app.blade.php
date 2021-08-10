@@ -16,27 +16,30 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item @if(request()->is('admin/stores')) active @endif">
-                    <a class="nav-link" aria-current="page" href="{{route('admin.stores.index')}}">Lojas</a>
-                </li>
-                <li class="nav-item  @if(request()->is('admin/products')) active @endif">
-                    <a class="nav-link" href="{{route('admin.products.index')}}">Produtos</a>
-                </li>
-            </ul>
-            <div action="" class="my-2 mylg-0">
+           @auth
+       
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#" onclick="event.preventDefault();
-                                                                                  document.querySelector('form.logout').submit();">Sair</a>
-                        <form action="{{route('logout')}}" class="logout" method="POST">
-                            @csrf
-                        </form>
+                    <li class="nav-item @if(request()->is('admin/stores')) active @endif">
+                        <a class="nav-link" aria-current="page" href="{{route('admin.stores.index')}}">Lojas</a>
                     </li>
-
+                    <li class="nav-item  @if(request()->is('admin/products')) active @endif">
+                        <a class="nav-link" href="{{route('admin.products.index')}}">Produtos</a>
+                    </li>
                 </ul>
-            </div>
+                <div action="" class="my-2 mylg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#" onclick="event.preventDefault();
+                                                                                    document.querySelector('form.logout').submit();">Sair</a>
+                            <form action="{{route('logout')}}" class="logout" method="POST">
+                                @csrf
+                            </form>
+                        </li>
 
+                    </ul>
+                </div>
+                
+            @endauth 
         </div>
     </div>
 </nav>
