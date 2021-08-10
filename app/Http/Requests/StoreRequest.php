@@ -25,7 +25,7 @@ class StoreRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'description' => 'required|mix:15',
+            'description' => 'required|min:15',
             'phone' => 'required',
             'mobile_phone' => 'required',
         ];
