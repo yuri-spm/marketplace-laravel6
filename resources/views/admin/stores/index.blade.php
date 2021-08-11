@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+    @if (!$store)
 
-    <a href="{{ route('admin.stores.create') }}" class="btn btn-lg btn-success">Criar Loja</a>
+        <a href="{{ route('admin.stores.create') }}" class="btn btn-lg btn-success">Criar Loja</a>
+        
+    @endif
     <table class="table table-str">
         <thead>
             <tr>
@@ -12,7 +15,6 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($stores as $store)
                 <tr>
                     <td>{{$store->id}}</td>
                     <td>{{$store->name}}</td>
@@ -28,10 +30,7 @@
                     </td>
 
                 </tr>
-            @endforeach
         </tbody>
     </table>
-
-    {{$stores->links()}} {{-- Paginação usar link --}}
 
 @endsection
