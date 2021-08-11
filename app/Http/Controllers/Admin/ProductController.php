@@ -51,10 +51,10 @@ class ProductController extends Controller
         $data = $request->all();
 
         $store = auth()->user()->store;
-        
+
         $product = $store->products()->create($data);
 
-        $product->categories()->sync($data['category']);
+        $product->categories()->sync($data['categories']);
 
         flash('Produto criado com sucesso!')->success();
         return redirect()->route('admin.products.index');
@@ -84,7 +84,7 @@ class ProductController extends Controller
         $categories = \App\Category::all(['id', 'name']);
 
 
-        return view('admin.products.edit', compact('product'));
+        return view('admin.products.edit', compact('product','categories'));
 
     }
 
@@ -101,7 +101,7 @@ class ProductController extends Controller
 
         $product = $this->product->find($product);
         $product->update($data);
-
+        $product->categories()->sync($data['categories']);
         flash('Produto atualizado com sucesso!')->success();
         return redirect()->route('admin.products.index');
     }
