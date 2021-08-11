@@ -34,8 +34,8 @@ class StoreRequest extends FormRequest
     public function messages()
     {
         return[
-            'min' => 'Campo deve ter no minimo :min caracteres',
-            'required' => 'Campo  obrigatório',
+            'required' => 'Este campo é obrigatorio!',
+            'min' => 'Campo deve ter no minimo :min caracteres!'
         ];
     }
 }

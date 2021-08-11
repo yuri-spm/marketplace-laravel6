@@ -11,7 +11,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 40px">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{route('home')}}">Marketplace L6</a>
+        <a class="navbar-brand" href="{{route('admin.stores.index')}}">Marketplace L6</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,10 +20,10 @@
             @auth
        
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item @if(request()->is('admin/stores')) active @endif">
+                    <li class="nav-item @if(request()->is('admin/stores*')) active @endif">
                         <a class="nav-link" aria-current="page" href="{{route('admin.stores.index')}}">Lojas</a>
                     </li>
-                    <li class="nav-item  @if(request()->is('admin/products')) active @endif">
+                    <li class="nav-item  @if(request()->is('admin/products*')) active @endif">
                         <a class="nav-link" href="{{route('admin.products.index')}}">Produtos</a>
                     </li>
                 </ul>
@@ -35,6 +35,7 @@
                             <form action="{{route('logout')}}" class="logout" method="POST">
                                 @csrf
                             </form>
+
                         </li>
                         <li class="nav-item">
                             <span class="nav-link">{{ auth()->user()->name }}</span>
@@ -43,7 +44,7 @@
                 </div>
                 
             @endauth 
-            
+
         </div>
     </div>
 </nav>
