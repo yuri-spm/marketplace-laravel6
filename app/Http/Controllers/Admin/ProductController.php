@@ -114,10 +114,7 @@ class ProductController extends Controller
         if($request->hasFile('photos')){
             $images = $this->imageUpload($request, 'image');
 
-            //inserçõ destas imagens na base
             $product->photos()->createMany($images);
-
-
         }
 
         flash('Produto atualizado com sucesso!')->success();
