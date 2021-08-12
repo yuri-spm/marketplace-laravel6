@@ -62,7 +62,7 @@
 
         <div class="form-group">
             <lavel>Fotos do Produto</lavel>
-            <input type="file" name="photos[]" class="form-control" multiple><
+            <input type="file" name="photos[]" class="form-control" multiple>
         </div>
 
         <div class="form-group">
