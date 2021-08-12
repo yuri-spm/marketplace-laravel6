@@ -17,6 +17,7 @@
         </thead>
         <tbody>
                 <tr>
+                    
                     <td>{{$store->id}}</td>
                     <td>{{$store->name}}</td>
                     <td>{{$store->products->count()}}</td>
@@ -34,5 +35,5 @@
                 </tr>
         </tbody>
     </table>
-
+    
 @endsection
