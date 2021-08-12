@@ -49,6 +49,11 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
+        $images = $request->file('photos');
+
+        foreach ($images as $image){
+            $images->store('products', 'public');
+        }
         $data = $request->all();
 
         $store = auth()->user()->store;
