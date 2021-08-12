@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa0326c1-20f4-4461-be32-d4d017ac09e0" name="Default Changelist" comment="" />
+    <list default="true" id="fa0326c1-20f4-4461-be32-d4d017ac09e0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +127,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -166,7 +175,12 @@
       <workItem from="1628596746386" duration="4247000" />
       <workItem from="1628615980131" duration="10360000" />
       <workItem from="1628681984931" duration="3304000" />
-      <workItem from="1628696652718" duration="6013000" />
+      <workItem from="1628696652718" duration="7262000" />
+      <workItem from="1628711282524" duration="204000" />
+      <workItem from="1628711936084" duration="1302000" />
+      <workItem from="1628767615037" duration="1338000" />
+      <workItem from="1628771792788" duration="6488000" />
+      <workItem from="1628790425760" duration="348000" />
     </task>
     <servers />
   </component>
