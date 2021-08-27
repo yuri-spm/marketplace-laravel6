@@ -6,23 +6,27 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreRequest;
 use App\Store;
+use App\Traits\UploadTrait;
 
 class StoreController extends Controller
 {
+
+    use UploadTrait;
+
     public function __construct()
-    {   
+    {
         $this->middleware('user.has.store')->only(['create', 'store']);
     }
     public function index()
     {
         $store = auth()->user()->store;
-        
+
         return  view('admin.stores.index', compact('store'));
     }
 
     public function create()
     {
-       
+
         $users = \App\User::all(['id', 'name']);
         return view('admin.stores.create', compact('users'));
     }
@@ -30,11 +34,13 @@ class StoreController extends Controller
     public function store(StoreRequest $request)
     {
 
-    
-
         $data = $request->all();
         $user =  auth()->user();
-        // $user = \App\User::find($data['user']);
+
+        if($request->hastFile('logo')){
+            $data['logo'] = $this->imageUpload($request, 'logo');
+        }
+
         $store = $user->store()->create($data);
 
          flash('Loja Criada com Sucesso')->success();
@@ -45,9 +51,9 @@ class StoreController extends Controller
 
      public function edit($store)
     {
-        
+
         $store = \App\Store::find($store);
-        
+
         return view('admin.stores.edit', compact('store'));
     }
 

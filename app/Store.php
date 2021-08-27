@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Store extends Model
 {
-    protected  $fillable = ['name', 'description', 'phone', 'mobile_phone', 'slug'];
+    protected  $fillable = ['name', 'description', 'phone', 'mobile_phone', 'slug', 'logo'];
 
     // 1 para 1 -> 1 loja  pertence a  1 usuario
     public function user()

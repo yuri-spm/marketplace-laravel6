@@ -87,12 +87,12 @@
                <form action="{{ route('admin.photo.remove')}}" method="post">
                     <input type="hidden" name="photoName" value="{{ $photo->image }}">
                     @csrf
-                    <img src="{{asset('storage/' . $photo->image)}}" alt="" class="img-fluid">
+                    <img src="{{asset('storage/' . $photo->image)}}" alt="" class="img-fluid" width="200">
 
                     <button class="submit" class="btn btn-lg btn-danger">Remover</button>
                </form>
            </div>
-       @endforeach    
+       @endforeach
     </div>
 
 

@@ -3,7 +3,7 @@
 @section('content')
     <h1>Criar Loja</h1>
 
-    <form action="{{ route('admin.stores.update', ['store'=> $store->id]) }}" method="post">
+    <form action="{{ route('admin.stores.update', ['store'=> $store->id]) }}" method="post" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="form-group">
@@ -24,6 +24,12 @@
             <label>Celular/Whatsapp</label>
             <input type="text" name="mobile_phone" class="form-control" value='{{$store->mobile_phone}}'>
         </div>
+
+        <div class="form-group">
+            <label>Fotos da Loja</label>
+            <input type="file" name="logo" class="form-control">
+        </div>
+
 
         <div class="form-group">
             <label>Slug</label>
