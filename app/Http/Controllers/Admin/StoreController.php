@@ -15,7 +15,7 @@ class StoreController extends Controller
 
     public function __construct()
     {
-        $this->middleware('user.has.store')->only(['create', 'store']);
+         $this->middleware('user.has.store')->only(['create', 'store']);
     }
     public function index()
     {
@@ -31,25 +31,26 @@ class StoreController extends Controller
         return view('admin.stores.create', compact('users'));
     }
 
+
     public function store(StoreRequest $request)
     {
 
         $data = $request->all();
         $user =  auth()->user();
 
-        if($request->hastFile('logo')){
-            $data['logo'] = $this->imageUpload($request, 'logo');
+        if ($request->hasFile('logo')) {
+
+            $data['logo'] = $this->imageUpload($request->file('logo'));
         }
 
         $store = $user->store()->create($data);
 
-         flash('Loja Criada com Sucesso')->success();
+        flash('Loja Criada com Sucesso')->success();
 
         return redirect()->route('admin.stores.index');
-
     }
 
-     public function edit($store)
+    public function edit($store)
     {
 
         $store = \App\Store::find($store);

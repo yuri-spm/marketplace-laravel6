@@ -5,18 +5,23 @@ use Illuminate\Http\Request;
 trait UploadTrait
 {
 
-    private function imageUpload(Request $request, $imageColumn = null)
+    private function imageUpload($images, $imageColumn = null)
     {
-        $images = $request->file('photos');
 
         $uploadedImages = [];
 
-        foreach ($images as $image){
-            if(is_null($imageColumn)){
+        if(is_array($images)){
+
+            foreach ($images as $image){
+
                 $uploadedImages[] = [$imageColumn => $image->store('products', 'public')];
+
             }
-            $uploadedImages = $image;
-        }
+
+            }else{
+                $uploadedImages = $images->store('logo', 'public');
+            }
+
         return $uploadedImages;
     }
 }
