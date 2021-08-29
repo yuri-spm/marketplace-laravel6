@@ -4,26 +4,26 @@ namespace App\Http\Controllers\Admin;
 
 
 use App\Category;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryRequest;
 
 class CategoryController extends Controller
 {
-    
+
     /**
      * category
      *
      * @var Category
      */
     private $category;
-    
+
 
     public function __construct(Category $category)
     {
         $this->category = $category;
     }
-    
+
     /**
      * Display a listing of the resource.
      *
