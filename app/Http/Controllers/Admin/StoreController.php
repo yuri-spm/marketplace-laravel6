@@ -17,7 +17,7 @@ class StoreController extends Controller
 
     public function __construct()
     {
-         $this->middleware('user.has.store')->only(['create', 'store']);
+        $this->middleware('user.has.store')->only(['create', 'store']);
     }
     public function index()
     {
@@ -68,7 +68,7 @@ class StoreController extends Controller
 
 
         if ($request->hasFile('logo')) {
-            if(Storage::disk('public')->exists($store->logo)){
+            if (Storage::disk('public')->exists($store->logo)) {
                 Storage::disk('public')->delete($store->logo);
             }
             $data['logo'] = $this->imageUpload($request->file('logo'));

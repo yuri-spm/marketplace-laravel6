@@ -13,7 +13,7 @@ use App\Traits\UploadTrait;
 class ProductController extends Controller
 {
 
-   use UploadTrait;
+    use UploadTrait;
 
     private $product;
 
@@ -43,7 +43,6 @@ class ProductController extends Controller
     {
         $categories = \App\Category::all(['id', 'name']);
         return view('admin.products.create', compact('categories'));
-
     }
 
     /**
@@ -62,7 +61,7 @@ class ProductController extends Controller
 
         $product->categories()->sync($data['categories']);
 
-        if($request->hasFile('photos')){
+        if ($request->hasFile('photos')) {
             $images = $this->imageUpload($request->file('photos'), 'image');
 
             $product->photos()->createMany($images);
@@ -96,8 +95,7 @@ class ProductController extends Controller
         $categories = \App\Category::all(['id', 'name']);
 
 
-        return view('admin.products.edit', compact('product','categories'));
-
+        return view('admin.products.edit', compact('product', 'categories'));
     }
 
     /**
@@ -116,7 +114,7 @@ class ProductController extends Controller
 
         $product->categories()->sync($data['categories']);
 
-        if($request->hasFile('photos')){
+        if ($request->hasFile('photos')) {
             $images = $this->imageUpload($request->file('photos'), 'image');
 
             $product->photos()->createMany($images);
@@ -141,5 +139,4 @@ class ProductController extends Controller
         flash('Produto removido com sucesso!')->success();
         return redirect()->route('admin.products.index');
     }
-
 }

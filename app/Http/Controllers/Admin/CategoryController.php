@@ -97,11 +97,11 @@ class CategoryController extends Controller
     {
         $data = $request->all();
 
-	    $category = $this->category->find($category);
-	    $category->update($data);
+        $category = $this->category->find($category);
+        $category->update($data);
 
-	    flash('Categoria Atualizada com Sucesso!')->success();
-	    return redirect()->route('admin.categories.index');
+        flash('Categoria Atualizada com Sucesso!')->success();
+        return redirect()->route('admin.categories.index');
     }
 
     /**
@@ -113,9 +113,9 @@ class CategoryController extends Controller
     public function destroy($category)
     {
         $category = $this->category->find($category);
-	    $category->delete();
+        $category->delete();
 
-	    flash('Categoria Removida com Sucesso!')->success();
-	    return redirect()->route('admin.categories.index');
+        flash('Categoria Removida com Sucesso!')->success();
+        return redirect()->route('admin.categories.index');
     }
 }
