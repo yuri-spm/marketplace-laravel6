@@ -3,7 +3,8 @@
 @section('content')
     <h1>Criar Loja</h1>
 
-    <form action="{{ route('admin.stores.update', ['store' => $store->id]) }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('admin.stores.update', ['store' => $store->id]) }}" method="post"
+        enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="form-group">
@@ -30,7 +31,13 @@
                 <img src="{{ asset('storage/' . $store->logo) }}" alt="" width="200">
             </p>
             <label>Fotos da Loja</label>
-            <input type="file" name="logo" class="form-control">
+            <input type="file" name="logo" class="form-control  @error('logo') is-invalid @enderror">
+
+            @error('logo')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
         </div>
 
 
