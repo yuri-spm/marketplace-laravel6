@@ -34,7 +34,6 @@
             <label>Conteúdo</label>
             <textarea name="body" id="" cols="30" rows="10"
                 class="form-control @error('body') is-invalid @enderror">{{ old('body') }}</textarea>
-
             @error('body')
                 <div class="invalid-feedback">
                     {{ $message }}
@@ -69,17 +68,13 @@
             <input type="file" name="photos[]" class="form-control @error('photos.*') is-invalid @enderror" multiple>
 
             @error('photos.*')
-            <div class="invalid-feedback">
-                {{ $message }}
-            </div>
-        @enderror
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
 
         </div>
-        <div class="form-group">
-            <label>Slug</label>
-            <input type="text" name="slug" class="form-control">
-        </div>
-
+        
         <div>
             <button type="submit" class="btn btn-lg btn-success">Criar Produto</button>
         </div>
