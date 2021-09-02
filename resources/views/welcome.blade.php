@@ -7,12 +7,18 @@
                 <div class="card" style="width: 90%;">
                     @if ($product->photos->count())
                         <img src="{{ asset('storage/' .$product->photos->first()->image) }}" alt="" class="card-img-top">
+                    @else
+                        <img src="{{ asset('assets/image/produto-sem-imagem.png') }}" alt="" class="card-img-top">
                     @endif
                     <div class="carb-body">
                         <h2 class="carb-title">{{ $product->name }}</h2>
                         <p class="card-text">
                             {{ $product->description }}
                         </p>
+                        <a href="{{ route('product.single', ['slug' => $product->slug]) }}" class="btn btn-success">
+                            Ver Produto
+                        </a>
+
                     </div>
                 </div>
             </div>
