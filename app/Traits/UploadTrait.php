@@ -5,6 +5,14 @@ use Illuminate\Http\Request;
 trait UploadTrait
 {
 
+    /**
+     * Method imageUpload
+     *
+     * @param $images $images
+     * @param $imageColumn $imageColumn 
+     *
+     * @return void
+     */
     private function imageUpload($images, $imageColumn = null)
     {
         $uploadedImages = [];

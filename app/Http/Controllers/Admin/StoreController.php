@@ -15,10 +15,23 @@ class StoreController extends Controller
 
     use UploadTrait;
 
+    /**
+     * Method __construct
+     *
+     * @return void
+     */
+
     public function __construct()
     {
         $this->middleware('user.has.store')->only(['create', 'store']);
     }
+
+    /**
+     * Method index
+     *
+     * @return void
+     */
+
     public function index()
     {
         $store = auth()->user()->store;
@@ -33,6 +46,14 @@ class StoreController extends Controller
         return view('admin.stores.create', compact('users'));
     }
 
+
+    /**
+     * Method store
+     *
+     * @param StoreRequest $request
+     *
+     * @return void
+     */
 
     public function store(StoreRequest $request)
     {
@@ -52,6 +73,14 @@ class StoreController extends Controller
         return redirect()->route('admin.stores.index');
     }
 
+    /**
+     * Method edit
+     *
+     * @param $store $store
+     *
+     * @return void
+     */
+
     public function edit($store)
     {
 
@@ -60,6 +89,23 @@ class StoreController extends Controller
         return view('admin.stores.edit', compact('store'));
     }
 
+    /**
+     * Method update
+     *
+     * @param StoreRequest $request
+     * @param $store $store
+     *
+     * @return void
+     */
+
+    /**
+     * Method update
+     *
+     * @param StoreRequest $request
+     * @param $store $store
+     *
+     * @return void
+     */
     public function update(StoreRequest $request, $store)
     {
         $data = $request->all();
@@ -81,6 +127,14 @@ class StoreController extends Controller
         return redirect()->route('admin.stores.index');
     }
 
+    /**
+     * Method destroy
+     *
+     * @param $store $store
+     *
+     * @return void
+     */
+    
     public function destroy($store)
     {
         $store = \App\Store::find($store);
