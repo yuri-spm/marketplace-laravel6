@@ -14,6 +14,11 @@
 Route::get('/','HomeController@index')->name('home');
 Route::get('/product/{slug}', 'HomeController@single')->name('product.single');
 
+Route::prefix('card')->name('card.')->group(function(){
+
+    Route::post('add', 'CardController@add')->name('add');
+});
+
 Route::group(['middleware' => ['auth']], function (){
     Route::prefix('admin')->name('admin.')->namespace('Admin')->group(function (){
 
