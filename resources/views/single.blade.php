@@ -32,7 +32,7 @@
             </div>
             <div class="product-add col-md-12">
                 <hr>
-                <form action="{{ route('card.add') }}" method="POST">
+                <form action="{{ route('cart.add') }}" method="POST">
                     <input type="hidden" name="product[name]" value="{{ $product->name }}">
                     <input type="hidden" name="product[price]" value="{{ $product->price }}"">
                     <input type="hidden" name="product[slug]" value="{{ $product->slug }}">
