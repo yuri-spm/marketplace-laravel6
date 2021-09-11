@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\CheckoutController;
+
 Route::get('/','HomeController@index')->name('home');
 Route::get('/product/{slug}', 'HomeController@single')->name('product.single');
 
@@ -23,6 +25,10 @@ Route::prefix('cart')->name('cart.')->group(function(){
     Route::get('cancel', 'CartController@cancel')->name('cancel');
 
 
+});
+
+Route::prefix('checkout')->name('checkout.')->group(function() {
+    Route::get('/', 'CheckoutController@index')->name('index');
 });
 
 Route::group(['middleware' => ['auth']], function (){
