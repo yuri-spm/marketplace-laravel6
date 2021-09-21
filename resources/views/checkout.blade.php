@@ -74,6 +74,8 @@
                     success: function(res) {
                         let imgFlag = `<img src="https://stc.pagseguro.uol.com.br/public/img/payment-methods-flags/68x30/${res.brand.name}.png">`
                         spanBrand.innerHTML = imgFlag;
+
+                        getInstallments(40, res.brand.name);
                     },
                     error: function(err){
                         console.log(err);
@@ -86,6 +88,22 @@
             }
         });
 
+        function getInstallments(amount, brand){
+            PagSeguroDirectPayment.getInstallments({
+                amount: amount,
+                brand:  brand,
+                maxInstallmentNoInterest: 0,
+                success: function(res){
+                    console.log(res);
+                },
+                erro: function(err){
+
+                },
+                complete: function (res){
+
+                },
+            });
+        }
     </script>
 
 @endsection
